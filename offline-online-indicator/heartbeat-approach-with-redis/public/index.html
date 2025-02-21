@@ -1,0 +1,31 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Online/Offline Indicator</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		#user-list div {
+			margin: 15px;
+			font-size: 1.5rem;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Online Status Indicator (Redis)</h1>
+	<button onclick="setHeartbeat()">Send Heartbeat (User 1)</button>
+	<button onclick="checkStatus()">Check Status</button>
+	<div id="results"></div>
+
+	<script src="index.js"></script>
+</body>
+
+</html>

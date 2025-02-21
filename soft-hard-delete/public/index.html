@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Soft-Hard Delete Simulation</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+	<div class="section">
+		<h2>Create a New User</h2>
+		<form id="createUserForm">
+			<label for="userName">Name:</label>
+			<input type="text" id="userName" name="name" required>
+
+			<label for="userBio">Bio:</label>
+			<textarea id="userBio" name="bio" rows="4" required></textarea>
+
+			<button type="submit">Create User</button>
+		</form>
+	</div>
+
+	<!-- Create Blog Form -->
+	<div class="section">
+		<h2>Create a New Blog</h2>
+		<form id="createBlogForm">
+			<label for="blogBody">Body:</label>
+			<textarea id="blogBody" name="body" rows="4" required></textarea>
+
+			<button type="submit">Create Blog</button>
+		</form>
+	</div>
+
+	<div class="section">
+		<h2>Users</h2>
+		<table id="usersTable">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Bio</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="section">
+		<h2>Blogs</h2>
+		<table id="blogsTable">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Body</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+
+	<script src="client.js"></script>
+</body>
+
+</html>
