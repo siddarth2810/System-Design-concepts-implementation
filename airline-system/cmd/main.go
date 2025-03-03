@@ -13,9 +13,11 @@ import (
 
 func printSeatMap() {
 	rows, err := io.DB.Query(`
-		SELECT name, user_id FROM seats ORDER BY SUBSTRING(name FROM 1 FOR 1), 
-		CAST(SUBSTRING(name FROM 3) AS INTEGER)
-	`)
+    SELECT name, user_id FROM seats 
+    ORDER BY 
+        split_part(name, '-', 1)::INTEGER, 
+        split_part(name, '-', 2)          
+`)
 	if err != nil {
 		log.Fatal(err)
 	}
